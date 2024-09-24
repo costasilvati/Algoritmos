@@ -4,7 +4,7 @@
 int main()
 {
     char conceito;
-    printf("Qual é o conceito\n");
+    printf("Qual eh o conceito\n");
     scanf(" %c",&conceito);
     switch(conceito){
     case 'A':
