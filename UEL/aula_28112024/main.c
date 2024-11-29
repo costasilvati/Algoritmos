@@ -1,41 +1,36 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 /*
 
-1 Escreva um algoritmo em C que recebe dois números
-inteiros do usuarios e verifica se ambos os numeros
-sao pares. Em caso positivo imprimir a mensagem
-”Ambos os nu ́meros informados s̃ao pares!”.
-Em caso negativo, verificar se algum dos dois
-numeros e par e informar.
+2. Implemente um algoritmo em C que recebe do usuario o
+peso e altura de uma pessoa e calcule o seu
+IMC (IMC = peso/altura2). O seu algoritmo deve mostrar
+em tela o valor do IMC calculado e deve informar a
+classificac ̧ ̃ao da pessoa, de acordo com a seguinte tabela:
+Menor que 18,5      - Magreza
+Entre 18,5 e 24,9   - Peso normal
+Entre 25 e 29,9     - Sobrepeso
+Maior que 30        - Obeso
 */
 int main(){
-    int valor1=0, valor2 = 0;
-    printf("Digite 2 numeros inteiros\n");
-    scanf("%d %d", &valor1, &valor2);
-    if(valor1%2==0 && valor2%2==0){
-        printf("Ambos sao pares \n");
-    }else if(valor1%2==0){ // valor 1 eh par?
-        printf("O valor %d eh par\n", valor1);
-    }else if(valor2%2==0){ // Valor 2 eh par??
-        printf("O valor %d eh par\n", valor2);
+    float altura=0, peso= 0, imc = 0;
+    printf("Digite sua altura\n");
+    scanf("%f", &altura);
+    printf("Digite seu peso \n");
+    scanf("%f", &peso);
+    imc = peso / pow(altura,2);
+
+    printf("IMC: %.2f \n\n", imc);
+    printf("Com base no seu IMC sua classificação de peso eh ");
+    if(imc < 18.5){
+        printf("Magreza \n");
+    }else if(imc <= 24.9){
+        printf("Peso Normal\n");
+    }else if(imc < 29.9){
+        printf("Sobrepeso \n");
     }else{
-        printf("Nenhum dos valores eh par\n");
+        printf("Obeso\n");
     }
     return 0;
 }
-/*
-int main(){
-    int valor1=0, valor2 = 0;
-    printf("Digite 2 numeros inteiros\n");
-    scanf("%d %d", &valor1, &valor2);
-    if(valor1%2==0 && valor2%2==0){
-        printf("Ambos sao pares \n");
-    }else if(valor1%2==0 ||valor2%2==0){
-        printf("Um dos valores eh par\n");
-    }else{
-        printf("Nenhum dos valores eh par\n");
-    }
-    return 0;
-}
-*/
