@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1739395550 source:/Volumes/SD128GB/GitHub/Algoritmos/UEL/aula_13022025_game_exemplo/main.c
+	<stdio.h>
+	<stdlib.h>
+
